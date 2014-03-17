@@ -1,0 +1,5 @@
+- name: configure the basho proserv repository
+  template: src=etc_apt_sources.list.d_bashoproserv.list.j2 dest=/etc/apt/sources.list.d/bashoproserv.list
+
+- name: install collectd
+  apt: pkg=collectd state=present  force=yes

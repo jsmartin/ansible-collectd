@@ -1,0 +1,16 @@
+---
+
+collectd_bind_ip: 0.0.0.0
+collectd_fqdnlookup: no
+collectd_graphite_addr: 127.0.0.1
+collectd_graphite_port: 2003
+collectd_hostname: "{{ ansible_fqdn }}"
+collectd_iface: eth0
+collectd_interval: 10
+collectd_server: 127.0.0.1
+collectd_threads: 5
+collectd_timeout: 2
+collectd_typesdb: no
+riak_http_port: 8098
+riakcs_port: 8080
+

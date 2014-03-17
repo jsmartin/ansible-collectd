@@ -1,0 +1,13 @@
+LoadPlugin write_graphite
+
+<Plugin write_graphite>
+  <Node "example">
+    Host "{{ collectd_graphite_addr }}"
+    Port "{{ collectd_graphite_port }}"
+    #Prefix "collectd"
+    #Postfix "collectd"
+    StoreRates true
+    AlwaysAppendDS false
+    EscapeCharacter "_"
+  </Node>
+</Plugin>

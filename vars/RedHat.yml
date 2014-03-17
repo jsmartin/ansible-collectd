@@ -1,0 +1,3 @@
+collectd_dir:  /etc/collectd.d
+plugin_conf_dir: "{{ collectd_dir }}"
+

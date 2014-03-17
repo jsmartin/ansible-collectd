@@ -1,0 +1,18 @@
+{% if not collectd_fqdnlookup %}
+Hostname {{ collectd_hostname }}
+FQDNLookup false
+{% else %}
+#Hostname localhost
+FQDNLookup true
+{% endif %}
+#BaseDir "/var/lib/collectd"
+#PluginDir "/usr/lib/collectd"
+{% if collectd_typesdb %}
+TypesDB {% for path in collectd_typesdb %} "{{ path }} " {% endfor %}
+{% else %}
+#TypesDB "/usr/share/collectd/types.db" "/etc/collectd/my_types.db"
+{% endif %}
+Interval {{ collectd_interval }}
+Timeout {{ collectd_timeout }}
+ReadThreads {{ collectd_threads }}
+Include "{{ plugin_conf_dir }}/*.conf"

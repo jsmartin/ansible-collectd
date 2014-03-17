@@ -1,0 +1,52 @@
+LoadPlugin curl_json
+
+<Plugin curl_json>
+  <URL "http://127.0.0.1:{{ riakcs_port }}/stats">
+    Instance "riakcs"
+    <Key "block_get">
+      Type "counter"
+    </Key>
+    <Key "block_put">
+      Type "counter"
+    </Key>
+    <Key "block_delete">
+      Type "counter"
+    </Key>
+    <Key "service_get_buckets">
+      Type "counter"
+    </Key>
+    <Key "bucket_list_keys">
+      Type "counter"
+    </Key>
+    <Key "bucket_create">
+      Type "counter"
+    </Key>
+    <Key "bucket_delete">
+      Type "counter"
+    </Key>
+    <Key "bucket_get_acl">
+      Type "counter"
+    </Key>
+    <Key "bucket_put_acl">
+      Type "counter"
+    </Key>
+    <Key "object_get">
+      Type "counter"
+    </Key>
+    <Key "object_put">
+      Type "counter"
+    </Key>
+    <Key "object_head">
+      Type "counter"
+    </Key>
+    <Key "object_delete">
+      Type "counter"
+    </Key>
+    <Key "object_get_acl">
+      Type "counter"
+    </Key>
+    <Key "object_put_acl">
+      Type "counter"
+    </Key>
+  </URL>
+</Plugin>

@@ -1,0 +1,6 @@
+[basho-proserv]
+name=Basho Proserv Packages for Enterprise Linux 6 - $basearch
+baseurl=https://s3.amazonaws.com/basho-proserv-benchmarking/yum/el/6/tools/$basearch
+failovermethod=priority
+enabled=1
+gpgcheck=0

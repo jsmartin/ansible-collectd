@@ -1,0 +1,310 @@
+LoadPlugin curl_json
+
+<Plugin curl_json>
+  <URL "http://127.0.0.1:{{ riak_http_port }}/stats">
+    Instance "riak"
+    <Key "converge_delay_last">
+      Type "gauge"
+    </Key>
+    <Key "converge_delay_max">
+      Type "gauge"
+    </Key>
+    <Key "converge_delay_mean">
+      Type "gauge"
+    </Key>
+    <Key "converge_delay_min">
+      Type "gauge"
+    </Key>
+    <Key "coord_redirs_total">
+      Type "counter"
+    </Key>
+    <Key "cpu_avg1">
+      Type "gauge"
+    </Key>
+    <Key "cpu_avg15">
+      Type "gauge"
+    </Key>
+    <Key "cpu_avg5">
+      Type "gauge"
+    </Key>
+    <Key "cpu_nprocs">
+      Type "gauge"
+    </Key>
+    <Key "executing_mappers">
+      Type "gauge"
+    </Key>
+    <Key "gossip_received">
+      Type "counter"
+    </Key>
+    <Key "handoff_timeouts">
+      Type "counter"
+    </Key>
+    <Key "ignored_gossip_total">
+      Type "counter"
+    </Key>
+    <Key "mem_allocated">
+      Type "counter"
+    </Key>
+    <Key "mem_total">
+      Type "counter"
+    </Key>
+    <Key "memory_atom">
+      Type "counter"
+    </Key>
+    <Key "memory_atom_used">
+      Type "gauge"
+    </Key>
+    <Key "memory_binary">
+      Type "gauge"
+    </Key>
+    <Key "memory_code">
+      Type "gauge"
+    </Key>
+    <Key "memory_ets">
+      Type "gauge"
+    </Key>
+    <Key "memory_processes">
+      Type "counter"
+    </Key>
+    <Key "memory_processes_used">
+      Type "gauge"
+    </Key>
+    <Key "memory_system">
+      Type "gauge"
+    </Key>
+    <Key "memory_total">
+      Type "counter"
+    </Key>
+    <Key "node_get_fsm_objsize_100">
+      Type "gauge"
+    </Key>
+    <Key "node_get_fsm_objsize_95">
+      Type "gauge"
+    </Key>
+    <Key "node_get_fsm_objsize_99">
+      Type "gauge"
+    </Key>
+    <Key "node_get_fsm_objsize_mean">
+      Type "gauge"
+    </Key>
+    <Key "node_get_fsm_objsize_median">
+      Type "gauge"
+    </Key>
+    <Key "node_get_fsm_siblings_100">
+      Type "gauge"
+    </Key>
+    <Key "node_get_fsm_siblings_95">
+      Type "gauge"
+    </Key>
+    <Key "node_get_fsm_siblings_99">
+      Type "gauge"
+    </Key>
+    <Key "node_get_fsm_siblings_mean">
+      Type "gauge"
+    </Key>
+    <Key "node_get_fsm_siblings_median">
+      Type "gauge"
+    </Key>
+    <Key "node_get_fsm_time_100">
+      Type "gauge"
+    </Key>
+    <Key "node_get_fsm_time_95">
+      Type "gauge"
+    </Key>
+    <Key "node_get_fsm_time_99">
+      Type "gauge"
+    </Key>
+    <Key "node_get_fsm_time_mean">
+      Type "gauge"
+    </Key>
+    <Key "node_get_fsm_time_median">
+      Type "gauge"
+    </Key>
+    <Key "node_gets">
+      Type "gauge"
+    </Key>
+    <Key "node_gets_total">
+      Type "counter"
+    </Key>
+    <Key "node_put_fsm_time_100">
+      Type "gauge"
+    </Key>
+    <Key "node_put_fsm_time_95">
+      Type "gauge"
+    </Key>
+    <Key "node_put_fsm_time_99">
+      Type "gauge"
+    </Key>
+    <Key "node_put_fsm_time_mean">
+      Type "gauge"
+    </Key>
+    <Key "node_put_fsm_time_median">
+      Type "gauge"
+    </Key>
+    <Key "node_puts">
+      Type "gauge"
+    </Key>
+    <Key "node_puts_total">
+      Type "counter"
+    </Key>
+    <Key "pbc_active">
+      Type "gauge"
+    </Key>
+    <Key "pbc_connects">
+      Type "gauge"
+    </Key>
+    <Key "pbc_connects_total">
+      Type "counter"
+    </Key>
+    <Key "pipeline_active">
+      Type "gauge"
+    </Key>
+    <Key "pipeline_create_count">
+      Type "counter"
+    </Key>
+    <Key "pipeline_create_error_count">
+      Type "counter"
+    </Key>
+    <Key "pipeline_create_error_one">
+      Type "counter"
+    </Key>
+    <Key "pipeline_create_one">
+      Type "counter"
+    </Key>
+    <Key "postcommit_fail">
+      Type "counter"
+    </Key>
+    <Key "precommit_fail">
+      Type "counter"
+    </Key>
+    <Key "read_repairs">
+      Type "gauge"
+    </Key>
+    <Key "read_repairs_total">
+      Type "counter"
+    </Key>
+    <Key "rebalance_delay_last">
+      Type "gauge"
+    </Key>
+    <Key "rebalance_delay_max">
+      Type "gauge"
+    </Key>
+    <Key "rebalance_delay_mean">
+      Type "gauge"
+    </Key>
+    <Key "rebalance_delay_min">
+      Type "gauge"
+    </Key>
+    <Key "rejected_handoffs">
+      Type "gauge"
+    </Key>
+    <Key "riak_core_stat_ts">
+      Type "gauge"
+    </Key>
+    <Key "riak_kv_stat_ts">
+      Type "gauge"
+    </Key>
+    <Key "riak_kv_vnodeq_max">
+      Type "gauge"
+    </Key>
+    <Key "riak_kv_vnodeq_mean">
+      Type "gauge"
+    </Key>
+    <Key "riak_kv_vnodeq_median">
+      Type "gauge"
+    </Key>
+    <Key "riak_kv_vnodeq_min">
+      Type "gauge"
+    </Key>
+    <Key "riak_kv_vnodeq_total">
+      Type "gauge"
+    </Key>
+    <Key "riak_kv_vnodes_running">
+      Type "gauge"
+    </Key>
+    <Key "riak_pipe_stat_ts">
+      Type "gauge"
+    </Key>
+    <Key "riak_pipe_vnodeq_max">
+      Type "gauge"
+    </Key>
+    <Key "riak_pipe_vnodeq_mean">
+      Type "gauge"
+    </Key>
+    <Key "riak_pipe_vnodeq_median">
+      Type "gauge"
+    </Key>
+    <Key "riak_pipe_vnodeq_min">
+      Type "gauge"
+    </Key>
+    <Key "riak_pipe_vnodeq_total">
+      Type "counter"
+    </Key>
+    <Key "riak_pipe_vnodes_running">
+      Type "gauge"
+    </Key>
+    <Key "ring_creation_size">
+      Type "gauge"
+    </Key>
+    <Key "ring_num_partitions">
+      Type "gauge"
+    </Key>
+    <Key "rings_reconciled">
+      Type "gauge"
+    </Key>
+    <Key "rings_reconciled_total">
+      Type "counter"
+    </Key>
+    <Key "sys_thread_pool_size">
+      Type "gauge"
+    </Key>
+    <Key "sys_threads_enabled">
+      Type "counter"
+    </Key>
+    <Key "sys_wordsize">
+      Type "counter"
+    </Key>
+    <Key "vnode_gets">
+      Type "gauge"
+    </Key>
+    <Key "vnode_gets_total">
+      Type "counter"
+    </Key>
+    <Key "vnode_index_deletes">
+      Type "gauge"
+    </Key>
+    <Key "vnode_index_deletes_postings">
+      Type "gauge"
+    </Key>
+    <Key "vnode_index_deletes_postings_total">
+      Type "gauge"
+    </Key>
+    <Key "vnode_index_deletes_total">
+      Type "gauge"
+    </Key>
+    <Key "vnode_index_reads">
+      Type "gauge"
+    </Key>
+    <Key "vnode_index_reads_total">
+      Type "counter"
+    </Key>
+    <Key "vnode_index_writes">
+      Type "gauge"
+    </Key>
+    <Key "vnode_index_writes_postings">
+      Type "gauge"
+    </Key>
+    <Key "vnode_index_writes_postings_total">
+      Type "counter"
+    </Key>
+    <Key "vnode_index_writes_total">
+      Type "counter"
+    </Key>
+    <Key "vnode_puts">
+      Type "gauge"
+    </Key>
+    <Key "vnode_puts_total">
+      Type "counter"
+    </Key>
+  </URL>
+</Plugin>

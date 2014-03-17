@@ -1,0 +1,33 @@
+---
+# tasks file for ansible-collectd
+
+# CentOS specific package installations
+- name: Add the OS specific variables
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- include: RedHat.yml
+  when: ansible_os_family  == "RedHat"
+
+# Ubuntu specific package installations
+- include: Debian.yml
+  when: ansible_os_family  == "Debian"
+
+- name: create /var/lib/collectd/csv
+  file: path=/var/lib/collectd/csv state=directory
+
+- name: create collectd plugin directory
+  file: path={{ plugin_conf_dir }} state=directory
+
+- name: copy configuration file
+  template: src=collectd.conf.j2 dest={{ config_file }}
+  notify: restart {{ service_name }}
+
+- name: start collectd
+  service: name=collectd state=started enabled=yes
+
+
+- name: copy configuration files
+  template: src={{ item }}.conf.j2 dest={{ plugin_conf_dir }}/{{ item }}.conf
+  notify: restart {{ service_name }}
+  with_items: collectd_configs 
+  notify: restart {{ service_name }}

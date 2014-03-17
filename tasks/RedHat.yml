@@ -1,0 +1,11 @@
+- name: fetch EPEL repository
+  yum: name=http://mirror.pnl.gov/epel/6/i386/epel-release-6-8.noarch.rpm
+
+- name: setup the basho proserv repo
+  copy: src=basho_proserv.repo dest=/etc/yum.repos.d/
+
+- name: install packages
+  yum: name={{ item }} state=present
+  with_items:
+  - collectd
+  - collectd-rrdtool
